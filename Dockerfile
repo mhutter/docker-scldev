@@ -1,6 +1,6 @@
 FROM docker
 
-WORKDIR /app
+WORKDIR /work
 CMD /bin/sh
 
 ENV DOCKER_SQUASH_URL=https://github.com/jwilder/docker-squash/releases/download/v0.2.0/docker-squash-linux-amd64-v0.2.0.tar.gz

@@ -8,7 +8,7 @@ systems.
 ```sh
 docker run -it --rm \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -v "$(pwd):/app" \
+  -v "$(pwd):/work" \
   mhutter/scldev
 ```
 
