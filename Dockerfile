@@ -7,8 +7,8 @@ ENV DOCKER_SQUASH_URL=https://github.com/jwilder/docker-squash/releases/download
     PATH=/root/go/bin:$PATH
 
 RUN set -x && \
-    apk add --no-cache bash coreutils git make && \
-    apk add --no-cache --virtual .build-deps curl go musl-dev && \
+    apk add --no-cache bash coreutils curl git make && \
+    apk add --no-cache --virtual .build-deps go musl-dev && \
     curl -sSL "$DOCKER_SQUASH_URL" -o /tmp/docker-squash.tgz && \
     tar -C /usr/local/bin -xzvf /tmp/docker-squash.tgz && \
     rm /tmp/docker-squash.tgz && \
