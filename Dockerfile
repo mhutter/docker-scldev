@@ -3,7 +3,8 @@ FROM docker
 WORKDIR /work
 CMD /bin/sh
 
-ENV DOCKER_SQUASH_URL=https://github.com/jwilder/docker-squash/releases/download/v0.2.0/docker-squash-linux-amd64-v0.2.0.tar.gz
+ENV DOCKER_SQUASH_URL=https://github.com/jwilder/docker-squash/releases/download/v0.2.0/docker-squash-linux-amd64-v0.2.0.tar.gz \
+    PATH=/root/go/bin:$PATH
 
 RUN set -x && \
     apk add --no-cache bash git make && \
